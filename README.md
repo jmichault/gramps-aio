@@ -1,7 +1,7 @@
 # gramps-aio
 
 quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows
-Attention : notes prises a posteriori, pas testées. Il y a surement des erreurs.   
+Attention : notes prises a posteriori, pas testées. Il y a sûrement des erreurs.   
 
 ## installation de msys2
 source : <https://www.gramps-project.org/wiki/index.php/Gramps_for_Windows_with_MSYS2>  
