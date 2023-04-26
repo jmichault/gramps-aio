@@ -90,10 +90,10 @@ for file in SETUP_FILES:
                          os.path.join('src', file)))
 for dll in MISSING_DLL:
     INCLUDE_FILES.append((os.path.join(INCLUDE_DLL_PATH, dll), dll))
-MISSING_LIBS = ['lib/enchant', 'lib/gdk-pixbuf-2.0', 'lib/girepository-1.0',
+MISSING_LIBS = ['lib/enchant-2', 'lib/gdk-pixbuf-2.0', 'lib/girepository-1.0',
                 'share/enchant', 'share/glib-2.0/schemas',
                 'share/xml/iso-codes', 'etc/gtk-3.0',
-                'ssl/certs', 'ssl/cert.pem', 'etc/fonts', 'lib/gio',
+                'etc/ssl/certs', 'etc/ssl/cert.pem', 'etc/fonts', 'lib/gio',
                 'share/gramps', 'share/doc/gramps', 'share/icons/gnome',
                 'share/icons/hicolor', 'share/icons/gramps.png',
                 'share/icons/Adwaita/icon-theme.cache',
