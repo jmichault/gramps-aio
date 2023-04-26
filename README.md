@@ -1,13 +1,14 @@
 # gramps-aio
 
-quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows
+quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows.  
 test avec succès le 26/04/2023.   
 
 source 1 : <https://www.gramps-project.org/wiki/index.php/Gramps_for_Windows_with_MSYS2>  
 Note 1 : il ne faut pas installer msys/gcc !!!  
 Note 2 : l'installation de fontconfig ne marche plus. On s'en passe.  
-source 2 : <https://www.gramps-project.org/wiki/index.php/Building_Gramps_AIO_cx_freeze-based>
-
+  
+source 2 : <https://www.gramps-project.org/wiki/index.php/Building_Gramps_AIO_cx_freeze-based>  
+Note : J'ai utilisé le cx_freeze fourni par msys2, non patché (la plupart des modifications du patch sont intégrées dans le cx_freeze actuel). ça simplifie grandement le processus. J'ai modifié les sources en conséquence.
 
 ## installation de msys2
 
@@ -49,15 +50,14 @@ python3 setup.py install
 tester : ` python3 Gramps.py `
 
 ## génération du paquet AIO
-# créer le dossier de travail
+### créer le dossier de travail
 ```
 mkdir ~/aio
 ```
-# y déposer les fichiers source
+### y déposer les fichiers source
 Ceux-ci peuvent etre récupérés depuis une installation AIO, ou depuis le dossier src de ce site.
 
-# récupérer certains fichiers depuis une installation AIO
-Liste non exhaustive ...
+### récupérer certains fichiers depuis une installation AIO
 
 ```
 cp -p /c/GrampsAIO64-5.1.5/zlib-cpython-36m.dll C:/msys64/mingw64/bin/
@@ -66,8 +66,9 @@ cp -Rp /c/GrampsAIO64-5.1.5/share/icons/gnome C:/msys64/mingw64/share/icons/
 cp -Rp /c/GrampsAIO64-5.1.5/share/icons/Adwaita C:/msys64/mingw64/share/icons/
 cp -p /c/GrampsAIO64-5.1.5/share/icons/gramps.png C:/msys64/mingw64/share/icons/
 ```
+(Note : zlib-cpython-36m.dll est-il nécessaire ? )
 
-# construire
+### construire
 
 ```
 cd ~/aio
@@ -75,4 +76,4 @@ python3 setup.py build_exe --no-compress
 makensis ~/aio/mingw64/src/grampsaio64.nsi
 ```
  
- Le résultat se trouve dans mingw64/src
+Et voilà ! Le résultat se trouve dans mingw64/src .
