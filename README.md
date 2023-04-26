@@ -67,7 +67,7 @@ cp -Rp /c/GrampsAIO64-5.1.5/share/icons/gnome C:/msys64/mingw64/share/icons/
 cp -Rp /c/GrampsAIO64-5.1.5/share/icons/Adwaita C:/msys64/mingw64/share/icons/
 cp -p /c/GrampsAIO64-5.1.5/share/icons/gramps.png C:/msys64/mingw64/share/icons/
 ```
-(Note : zlib-cpython-36m.dll est-il nécessaire ? )
+(Note : zlib-cpython-36m.dll n'est probablement pas nécessaire. )
 
 ### construire
 
