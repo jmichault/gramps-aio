@@ -8,7 +8,8 @@ Note 1 : il ne faut pas installer msys/gcc !!!
 Note 2 : l'installation de fontconfig ne marche plus. On s'en passe, les symboles généalogiques ne seront pas disponibles.  
   
 source 2 : <https://www.gramps-project.org/wiki/index.php/Building_Gramps_AIO_cx_freeze-based>  
-Note : J'ai utilisé le cx_freeze fourni par msys2, non patché (la plupart des modifications du patch sont intégrées dans le cx_freeze actuel). ça simplifie grandement le processus. J'ai modifié les sources en conséquence.
+Note 1 : J'ai utilisé le cx_freeze fourni par msys2, non patché (la plupart des modifications du patch sont intégrées dans le cx_freeze actuel). ça simplifie grandement le processus. J'ai modifié les sources en conséquence.  
+Note 2 : J'ai aussi modifié les sources pour inclure les modules requests, asyncio et pip.  
 
 ## installation de msys2
 
