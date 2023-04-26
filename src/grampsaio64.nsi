@@ -154,6 +154,9 @@ Section "Gramps" Section1
 	SetOutPath "$INSTDIR\gramps\"
 	File /r  "..\gramps\"
 	
+	SetOutPath "$INSTDIR\ssl\"
+	File /r  "..\etc\ssl\"
+	
 	SetOutPath "$INSTDIR\src\"
 	File /r  ".\"
 	
@@ -525,6 +528,7 @@ Section Uninstall
 	RMDir /r "$INSTDIR\lib"
 	RMDir /r "$INSTDIR\share"
 	RMDir /r "$INSTDIR\src"
+	RMDir /r "$INSTDIR\ssl"
 	RMDir /r "$INSTDIR\gramps"
 	RMDir /r "$INSTDIR\var"
 	RMDir /r "$INSTDIR"
