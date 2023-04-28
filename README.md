@@ -61,13 +61,11 @@ Ceux-ci peuvent etre récupérés depuis une installation AIO, ou depuis le doss
 ### récupérer certains fichiers depuis une installation AIO
 
 ```
-cp -p /c/GrampsAIO64-5.1.5/zlib-cpython-36m.dll C:/msys64/mingw64/bin/
 cp -Rp /c/GrampsAIO64-5.1.5/share/enchant/myspell C:/msys64/mingw64/share/enchant/
 cp -Rp /c/GrampsAIO64-5.1.5/share/icons/gnome C:/msys64/mingw64/share/icons/
 cp -Rp /c/GrampsAIO64-5.1.5/share/icons/Adwaita C:/msys64/mingw64/share/icons/
 cp -p /c/GrampsAIO64-5.1.5/share/icons/gramps.png C:/msys64/mingw64/share/icons/
 ```
-(Note : zlib-cpython-36m.dll n'est probablement pas nécessaire. )
 
 ### construire
 
