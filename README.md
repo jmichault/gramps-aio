@@ -35,6 +35,15 @@ wget https://github.com/bpisoj/MINGW-packages/releases/download/v5.0/mingw-w64-x
 pacman -U mingw-w64-x86_64-db-6.0.30-1-any.pkg.tar.xz
 pacman -S --noconfirm mingw-w64-x86_64-python3-bsddb3
 ```
+* installer pygraphviz
+
+```
+mkdir  ~/build
+cd ~/build
+wget https://github.com/bpisoj/MINGW-packages/releases/download/v5.0/mingw-w64-x86_64-python3-pygraphviz-1.4rc1-1-any.pkg.tar.xz
+pacman -U mingw-w64-x86_64-python3-pygraphviz-1.4rc1-1-any.pkg.tar.xz
+```
+
 
 ## installation de gramps depuis les sources
 
