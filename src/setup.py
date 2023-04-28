@@ -44,7 +44,7 @@ INCLUDE_FILES = []
 INCLUDES = ['gi', 'cgi', 'colorsys', 'site']
 PACKAGES = ['gi', 'cairo', 'xml', 'bsddb3', 'lxml', 'PIL', 'json', 'csv',
             'sqlite3', 'cProfile', 'networkx', 'psycopg2', 'requests', 'logging'
-            , 'html', 'compileall' ]
+            , 'html', 'compileall', 'graphviz', 'pydotplus', 'pygraphviz' ]
 EXCLUDES = ['tkinter', 'PyQt5', 'PyQt5.QtCore', 'PyQt5.QtGui', 'pyside'
             'PyQt5.QtWidgets', 'sip', 'lib2to3', 'PIL.ImageQt', 'pip', 'distlib'
             ]
@@ -63,8 +63,7 @@ MISSING_DLL = ['libgtk-3-0.dll', 'libgtkspell3-3-0.dll', 'libgexiv2-2.dll',
                'glib-compile-schemas.exe',
                'gdk-pixbuf-query-loaders.exe', 'gtk-update-icon-cache-3.0.exe',
                'fc-cache.exe', 'fc-match.exe', 'gspawn-win64-helper-console.exe',
-               'gspawn-win64-helper.exe', 'libgeocode-glib-0.dll',
-               'zlib-cpython-36m.dll'
+               'gspawn-win64-helper.exe', 'libgeocode-glib-0.dll'
                ]
 BIN_EXCLUDES = ['Qt5Core.dll', 'gdiplus.dll', 'gdiplus']
 
