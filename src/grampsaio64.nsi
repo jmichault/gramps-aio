@@ -189,6 +189,26 @@ Section "Gramps" Section1
 SectionEnd
 
 SectionGroup "Dictionaries" sec_d
+Section /o "ca" d_ca
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\ca_ES.*"
+SectionEnd
+Section /o "cs" d_cs
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\cs_CZ.*"
+SectionEnd
+Section /o "da" d_da
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\da_DK.*"
+SectionEnd
+Section /o "de" d_de
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\de_DE.*"
+SectionEnd
+Section /o "en_AU" d_enau
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\en_AU.*"
+SectionEnd
 Section "en_GB" d_engb
 	SectionIn RO
 	SetOutPath "$INSTDIR\share\enchant\"
@@ -196,9 +216,57 @@ Section "en_GB" d_engb
 	SetOutPath "$INSTDIR\share\enchant\myspell\"
 		File "..\share\enchant\myspell\en_GB.*"
 SectionEnd
+Section /o "en_US" d_enus
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\en_US.*"
+SectionEnd
+Section /o "es_ES" d_es
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\es_ES.*"
+SectionEnd
 Section /o "fr_FR" d_fr
 	SetOutPath "$INSTDIR\share\enchant\myspell\"
 		File "..\share\enchant\myspell\fr_FR.*"
+SectionEnd
+Section /o "hr_HR" d_hr
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\hr_HR.*"
+SectionEnd
+Section /o "it_IT" d_it
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\it_IT.*"
+SectionEnd
+Section /o "nb_NO" d_nb
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\nb_no.*"
+SectionEnd
+Section /o "nl_NL" d_nl
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\nl_NL.*"
+SectionEnd
+Section /o "nn_NO" d_nn
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\nn_NO.*"
+SectionEnd
+Section /o "pl_PL" d_pl
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\pl_PL.*"
+SectionEnd
+Section /o "ru_RU" d_ru
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\ru_RU.*"
+SectionEnd
+Section /o "sk_SK" d_sk
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\sk_SK.*"
+SectionEnd
+Section /o "sl_SI" d_sl
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\sl_SI.*"
+SectionEnd
+Section /o "sv_SE" d_sv
+	SetOutPath "$INSTDIR\share\enchant\myspell\"
+		File "..\share\enchant\myspell\sv_SE.*"
 SectionEnd
 SectionGroupEnd
 
@@ -428,18 +496,23 @@ Function sel_langs
         SectionSetFlags ${bg} 1
     StrCmp $LANGUAGE ${LANG_CATALAN} 0 +3
         SectionSetFlags ${ca} 1
+        SectionSetFlags ${d_ca} 1
     StrCmp $LANGUAGE ${LANG_CZECH} 0 +3
         SectionSetFlags ${cs} 1
+        SectionSetFlags ${d_cs} 1
     StrCmp $LANGUAGE ${LANG_DANISH} 0 +3
         SectionSetFlags ${da} 1
+        SectionSetFlags ${d_da} 1
     StrCmp $LANGUAGE ${LANG_GERMAN} 0 +3
         SectionSetFlags ${de} 1
+        SectionSetFlags ${d_de} 1
     StrCmp $LANGUAGE ${LANG_GREEK} 0 +2
         SectionSetFlags ${el} 1
     StrCmp $LANGUAGE ${LANG_ESPERANTO} 0 +2
         SectionSetFlags ${eo} 1
     StrCmp $LANGUAGE ${LANG_SPANISH} 0 +3
         SectionSetFlags ${es} 1
+        SectionSetFlags ${d_es} 1
     StrCmp $LANGUAGE ${LANG_FINNISH} 0 +2
         SectionSetFlags ${fi} 1
     StrCmp $LANGUAGE ${LANG_FRENCH} 0 +3
@@ -449,39 +522,49 @@ Function sel_langs
         SectionSetFlags ${he} 1
     StrCmp $LANGUAGE ${LANG_CROATIAN} 0 +3
         SectionSetFlags ${hr} 1
+        SectionSetFlags ${d_hr} 1
     StrCmp $LANGUAGE ${LANG_HUNGARIAN} 0 +2
         SectionSetFlags ${hu} 1
     StrCmp $LANGUAGE ${LANG_ICELANDIC} 0 +2
         SectionSetFlags ${is} 1
     StrCmp $LANGUAGE ${LANG_ITALIAN} 0 +3
         SectionSetFlags ${it} 1
+        SectionSetFlags ${d_it} 1
     StrCmp $LANGUAGE ${LANG_JAPANESE} 0 +2
         SectionSetFlags ${ja} 1
     StrCmp $LANGUAGE ${LANG_LITHUANIAN} 0 +2
         SectionSetFlags ${lt} 1
     StrCmp $LANGUAGE ${LANG_NORWEGIAN} 0 +5
         SectionSetFlags ${nb} 1
+        SectionSetFlags ${d_nb} 1
         SectionSetFlags ${nn} 1
+        SectionSetFlags ${d_nn} 1
     StrCmp $LANGUAGE ${LANG_DUTCH} 0 +3
         SectionSetFlags ${nl} 1
+        SectionSetFlags ${d_nl} 1
     StrCmp $LANGUAGE ${LANG_POLISH} 0 +3
         SectionSetFlags ${pl} 1
+        SectionSetFlags ${d_pl} 1
     StrCmp $LANGUAGE ${LANG_PORTUGUESEBR} 0 +2
         SectionSetFlags ${pt_BR} 1
     StrCmp $LANGUAGE ${LANG_PORTUGUESE} 0 +2
         SectionSetFlags ${pt_PT} 1
     StrCmp $LANGUAGE ${LANG_RUSSIAN} 0 +3
         SectionSetFlags ${ru} 1
+        SectionSetFlags ${d_ru} 1
     StrCmp $LANGUAGE ${LANG_SLOVAK} 0 +3
         SectionSetFlags ${sk} 1
+        SectionSetFlags ${d_sk} 1
     StrCmp $LANGUAGE ${LANG_SLOVENIAN} 0 +3
         SectionSetFlags ${sl} 1
+        SectionSetFlags ${d_sl} 1
     StrCmp $LANGUAGE ${LANG_ALBANIAN} 0 +2
         SectionSetFlags ${sq} 1
     StrCmp $LANGUAGE ${LANG_SERBIAN} 0 +2
         SectionSetFlags ${sr} 1
     StrCmp $LANGUAGE ${LANG_SWEDISH} 0 +3
         SectionSetFlags ${sv} 1
+        SectionSetFlags ${d_sv} 1
     StrCmp $LANGUAGE ${LANG_TURKISH} 0 +2
         SectionSetFlags ${tr} 1
     StrCmp $LANGUAGE ${LANG_UKRAINIAN} 0 +2
@@ -499,10 +582,14 @@ FunctionEnd
 
 Section -FinishSection
 	DetailPrint "Configuring GraphViz Dot..."
-	nsExec::ExecToLog '"$INSTDIR\dot.exe" -c'
+	ReadEnvStr $R0 "PATH"
+	StrCpy $R0 "$R0;$INSTDIR\lib"
+	System::Call 'Kernel32::SetEnvironmentVariable(t, t) i("PATH", R0).r0'
+	SetOutPath $INSTDIR
+	nsExec::ExecToLog '"$INSTDIR\lib\dot.exe" -c'
     System::Call 'Kernel32::SetEnvironmentVariable(t, t)i ("FC_DEBUG", "128").r0'
 	DetailPrint "Creating fontconfig cache (might take a while)..."
-	nsExec::ExecToLog '"$INSTDIR\fc-cache.exe" -fv'
+	nsExec::ExecToLog '"$INSTDIR\lib\fc-cache.exe" -fv'
     System::Call 'Kernel32::SetEnvironmentVariable(t, n)i ("FC_DEBUG", "").r0'
 
 	WriteRegStr SHCTX "${UNINST_KEY}" "DisplayName" "${APPNAME}"

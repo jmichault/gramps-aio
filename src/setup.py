@@ -44,7 +44,7 @@ INCLUDE_FILES = []
 INCLUDES = ['gi', 'cgi', 'colorsys', 'site']
 PACKAGES = ['gi', 'cairo', 'xml', 'bsddb3', 'lxml', 'PIL', 'json', 'csv',
             'sqlite3', 'cProfile', 'networkx', 'psycopg2', 'requests', 'logging'
-            , 'html', 'compileall', 'graphviz', 'pydotplus', 'pygraphviz' ]
+            , 'html', 'compileall', 'graphviz', 'pydotplus', 'pygraphviz', 'pydot' ]
 EXCLUDES = ['tkinter', 'PyQt5', 'PyQt5.QtCore', 'PyQt5.QtGui', 'pyside'
             'PyQt5.QtWidgets', 'sip', 'lib2to3', 'PIL.ImageQt', 'pip', 'distlib'
             ]
@@ -88,7 +88,8 @@ for file in SETUP_FILES:
     INCLUDE_FILES.append((os.path.join(SETUP_DIR, file),
                          os.path.join('src', file)))
 for dll in MISSING_DLL:
-    INCLUDE_FILES.append((os.path.join(INCLUDE_DLL_PATH, dll), dll))
+    INCLUDE_FILES.append((os.path.join(INCLUDE_DLL_PATH, dll),
+                          os.path.join('lib',dll)))
 MISSING_LIBS = ['lib/enchant-2', 'lib/gdk-pixbuf-2.0', 'lib/girepository-1.0',
                 'share/enchant', 'share/glib-2.0/schemas',
                 'share/xml/iso-codes', 'etc/gtk-3.0',
@@ -124,16 +125,6 @@ for lang in LANGUAGES:
 
 GRAMPS = os.path.join(site.getsitepackages()[0], 'gramps')
 INCLUDE_FILES.append(GRAMPS)
-#EXECUTABLES = [cx_Freeze.Executable("grampsaioc.py", base="Console_Opt",
-#                                    targetName='gramps.exe',
-#                                    icon='grampsc.ico', copyright=COPYRIGHT),
-#               cx_Freeze.Executable("grampsaiow.py", base="Win32GUI_Opt",
-#                                    targetName='grampsw.exe',
-#                                    icon='gramps.ico', copyright=COPYRIGHT),
-#               cx_Freeze.Executable("grampsaiocd.py", base="Console",
-#                                    targetName='grampsd.exe',
-#                                    icon='grampsd.ico', copyright=COPYRIGHT)
-#              ]
 EXECUTABLES = [cx_Freeze.Executable("grampsaioc.py", base="Console",
                                     targetName='gramps.exe',
                                     icon='gramps.ico', copyright=COPYRIGHT),
