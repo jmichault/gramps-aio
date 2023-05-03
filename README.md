@@ -10,6 +10,7 @@ Note 2 : l'installation de fontconfig ne marche plus. On s'en passe, les symbole
 source 2 : <https://www.gramps-project.org/wiki/index.php/Building_Gramps_AIO_cx_freeze-based>  
 Note 1 : J'ai utilisé le cx_freeze fourni par msys2, non patché (la plupart des modifications du patch sont intégrées dans le cx_freeze actuel). ça simplifie grandement le processus. J'ai modifié les sources en conséquence.  
 Note 2 : J'ai aussi modifié les sources pour inclure les modules requests, asyncio et pip.  
+Note 3 : J'ai déplacé les DLLs et EXEs scondairs dans le dossier lib, et modifié les sources en conséquence.
 
 ## installation de msys2
 
@@ -71,13 +72,13 @@ mkdir ~/aio
 ### y déposer les fichiers source
 Ceux-ci peuvent etre récupérés depuis une installation AIO, ou depuis le dossier src de ce site.
 
-### récupérer certains fichiers depuis une installation AIO
+### récupérer certains fichiers depuis une installation AIO complète (avec tous les dictionnaires) dans c:\gramps
 
 ```
-cp -Rp /c/GrampsAIO64-5.1.5/share/enchant/myspell C:/msys64/mingw64/share/enchant/
-cp -Rp /c/GrampsAIO64-5.1.5/share/icons/gnome C:/msys64/mingw64/share/icons/
-cp -Rp /c/GrampsAIO64-5.1.5/share/icons/Adwaita C:/msys64/mingw64/share/icons/
-cp -p /c/GrampsAIO64-5.1.5/share/icons/gramps.png C:/msys64/mingw64/share/icons/
+cp -Rp /c/Gramps/share/enchant/myspell C:/msys64/mingw64/share/enchant/
+cp -Rp /c/Gramps/share/icons/gnome C:/msys64/mingw64/share/icons/
+cp -Rp /c/Gramps/share/icons/Adwaita C:/msys64/mingw64/share/icons/
+cp -p /c/Gramps/share/icons/gramps.png C:/msys64/mingw64/share/icons/
 ```
 
 ### construire
