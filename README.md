@@ -1,7 +1,7 @@
 # gramps-aio
 
 quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows.  
-test avec succès le 26/04/2023.   
+testé avec succès le 26/04/2023.   
 
 source 1 : <https://www.gramps-project.org/wiki/index.php/Gramps_for_Windows_with_MSYS2>  
 Note 1 : il ne faut pas installer msys/gcc !!!  
