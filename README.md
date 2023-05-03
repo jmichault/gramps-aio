@@ -62,7 +62,11 @@ python3 setup.py build
 python3 setup.py install
 ```
 
-tester : ` python3 Gramps.py `
+tester : ` python3 Gramps.py `  
+  
+vous pouvez aussi créer un raccourci pour lancer gramps dans cette installation :
+* commande à éxécuter : `C:\msys64\mingw64.exe bash -c "cd ~/grampsdev;python Gramps.py"`
+
 
 ## génération du paquet AIO
 ### créer le dossier de travail
