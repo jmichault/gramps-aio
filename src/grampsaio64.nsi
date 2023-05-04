@@ -19,8 +19,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 !define APPNAME "GrampsAIO64"
-!define APPVERSION "5.1.5"
-!define APPBUILD "1"
+!define APPVERSION "5.1.5-jmt"
+!define APPBUILD "r230504"
 !define APPNAMEANDVERSION "${APPNAME} ${APPVERSION}"
 !define APP_PUBLISHER "The Gramps project"
 !define APP_WEB_SITE "https://gramps-project.org"
