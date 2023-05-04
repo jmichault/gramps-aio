@@ -1,7 +1,9 @@
 # gramps-aio
 
 quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows.  
-testé avec succès le 26/04/2023.   
+à tester car en partie composé de notes prises a posteriori.   
+
+Je me suis basé sur les deux documents suivants :  
 
 source 1 : <https://www.gramps-project.org/wiki/index.php/Gramps_for_Windows_with_MSYS2>  
 Note 1 : il ne faut pas installer msys/gcc !!!  
@@ -49,6 +51,13 @@ MINGW_INSTALLS=mingw64 makepkg-mingw -sLf
 pacman -U mingw-w64-x86_64-python3-pygraphviz-1.4rc1-0.0-any.pkg.tar.zst
 ```
 
+* récupérer certains fichiers manquants (icônes et dictionnaires)
+
+```
+wget https://github.com/jmichault/gramps-aio/raw/main/src/share.tgz
+tar --directory /c/msys64/mingw64/share/ -zxf share.tgz
+```
+
 
 ## installation de gramps depuis les sources
 
@@ -74,18 +83,10 @@ vous pouvez aussi créer un raccourci pour lancer gramps dans cette installation
 mkdir ~/aio
 ```
 ### y déposer les fichiers source
-Ceux-ci peuvent etre récupérés depuis une installation AIO, ou depuis le dossier src de ce site.
+Copier tous les fichiers du dossier src.
 
-### récupérer certains fichiers depuis une installation AIO complète (avec tous les dictionnaires) dans c:\gramps
 
-```
-cp -Rp /c/Gramps/share/enchant/myspell C:/msys64/mingw64/share/enchant/
-cp -Rp /c/Gramps/share/icons/gnome C:/msys64/mingw64/share/icons/
-cp -Rp /c/Gramps/share/icons/Adwaita C:/msys64/mingw64/share/icons/
-cp -p /c/Gramps/share/icons/gramps.png C:/msys64/mingw64/share/icons/
-```
-
-### construire
+### construire le paquet
 
 ```
 cd ~/aio
