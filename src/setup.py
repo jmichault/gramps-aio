@@ -126,13 +126,13 @@ for lang in LANGUAGES:
 GRAMPS = os.path.join(site.getsitepackages()[0], 'gramps')
 INCLUDE_FILES.append(GRAMPS)
 EXECUTABLES = [cx_Freeze.Executable("grampsaioc.py", base="Console",
-                                    targetName='gramps.exe',
+                                    target_name='gramps.exe',
                                     icon='gramps.ico', copyright=COPYRIGHT),
                cx_Freeze.Executable("grampsaiow.py", base="Win32GUI",
-                                    targetName='grampsw.exe',
+                                    target_name='grampsw.exe',
                                     icon='gramps.ico', copyright=COPYRIGHT),
                cx_Freeze.Executable("grampsaiocd.py", base="Console",
-                                    targetName='grampsd.exe',
+                                    target_name='grampsd.exe',
                                     icon='grampsd.ico', copyright=COPYRIGHT)
                ]
 BUILD_EXE_OPTIONS = {'packages':PACKAGES,
