@@ -4,13 +4,13 @@ pacman -Sy --noconfirm mingw-w64-x86_64-python-pip mingw-w64-x86_64-python3-bsdd
 python3  -m pip install --upgrade pip
 ## prerequisites in pip packages
 pip3 install --upgrade pydot pydotplus requests asyncio
-## berkeley db
+## berkeley db, from sources
 mkdir  ~/build
 cd ~/build
 wget https://github.com/bpisoj/MINGW-packages/releases/download/v5.0/mingw-w64-x86_64-db-6.0.30-1-any.pkg.tar.xz
 pacman -U --noconfirm mingw-w64-x86_64-db-6.0.30-1-any.pkg.tar.xz
 pacman -S --noconfirm mingw-w64-x86_64-python3-bsddb3
-## pygraphviz
+## pygraphviz, from sources
 wget  https://gramps-project.org/wiki/images/2/2b/Pygraphviz-1.4rc1.zip
 mkdir pygraphviz-1.4rc1
 cd pygraphviz-1.4rc1
@@ -18,6 +18,8 @@ unzip ../Pygraphviz-1.4rc1.zip
 MINGW_INSTALLS=mingw64 makepkg-mingw -sLf
 pacman -U --noconfirm mingw-w64-x86_64-python3-pygraphviz-1.4rc1-0.0-any.pkg.tar.zst
 ## 
+cd ~
+git clone https://github.com/jmichault/gramps-aio.git
 tar --directory /c/msys64/mingw64/share/ -zxf ~/gramps-aio/src/share.tgz
 
 # install gramps 5.1.5 from sources
@@ -29,7 +31,9 @@ git checkout v5.1.5
 python3 setup.py build
 python3 setup.py install
 
+# build aio
 cd ~/gramps-aio/src
 python3 setup.py build_exe --no-compress
-makensis ~/aio/mingw64/src/grampsaio64.nsi
+makensis mingw64/src/grampsaio64.515.nsi
 
+# result is in mingw64/src
