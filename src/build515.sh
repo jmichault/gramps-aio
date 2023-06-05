@@ -33,7 +33,8 @@ python3 setup.py install
 
 # build aio
 cd ~/gramps-aio/src
+cp -p grampsaio64.nsi.515 grampsaio64.nsi
 python3 setup.py build_exe --no-compress
-makensis mingw64/src/grampsaio64.515.nsi
+makensis mingw64/src/grampsaio64.nsi
 
 # result is in mingw64/src
