@@ -1,7 +1,6 @@
 # gramps-aio
 
 quelques notes sur la création d'une installation gramps-AIO 64 bits pour windows.  
-script testé avec succès le 5 juin 2023.
 
 Je me suis basé sur les deux documents suivants :  
 
@@ -26,6 +25,15 @@ Note 3 : J'ai déplacé les DLLs et EXEs secondaires dans le dossier lib, et mod
 ```
 wget https://raw.githubusercontent.com/jmichault/gramps-aio/main/src/build515.sh -O build515.sh
 ./build515.sh
+```
+
+Et voilà ! Le résultat se trouve dans ~/gramps-aio/src/mingw64/src .
+
+## construction du paquet AIO master (version de développement) par script (durée : environ 15 minutes)
+
+```
+wget https://raw.githubusercontent.com/jmichault/gramps-aio/main/src/buildmaster.sh -O buildmaster.sh
+./buildmaster.sh
 ```
 
 Et voilà ! Le résultat se trouve dans ~/gramps-aio/src/mingw64/src .

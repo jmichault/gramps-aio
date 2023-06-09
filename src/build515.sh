@@ -34,6 +34,7 @@ python3 setup.py install
 # build aio
 cd ~/gramps-aio/src
 cp -p grampsaio64.nsi.515 grampsaio64.nsi
+cp -p setup.py.515 setup.py
 python3 setup.py build_exe --no-compress
 makensis mingw64/src/grampsaio64.nsi
 
